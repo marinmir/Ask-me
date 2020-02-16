@@ -47,8 +47,8 @@ class AvatarCell: UITableViewCell {
         _nicknameTextField.layer.cornerRadius = 5
         _nicknameTextField.borderStyle = .roundedRect
         _nicknameTextField.layer.borderWidth = 1
-        _nicknameTextField.layer.borderColor = Palette.mainColor.cgColor
-        _nicknameTextField.textColor = Palette.mainColor
+        _nicknameTextField.layer.borderColor = Palette.darkCoffeeColor.cgColor
+        _nicknameTextField.textColor = Palette.darkCoffeeColor
         _nicknameTextField.autocapitalizationType = .words
         contentView.addSubview(_nicknameTextField)
         

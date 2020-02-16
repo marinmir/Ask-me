@@ -17,6 +17,4 @@ class testDB {
     }
     
     private let ref: DatabaseReference!
-
-    
 }

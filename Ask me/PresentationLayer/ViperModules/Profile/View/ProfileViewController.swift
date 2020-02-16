@@ -37,7 +37,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
                 switch indexPath.row {
             case 0:
                 let cell = StaticPersonalInfoCell()
-                cell.setContent(name: "Phone number", value: presenter!.getUserPhoneNumber())
+                cell.setContent(name: "Phone ", value: presenter!.getUserPhoneNumber())
                 return cell
             default:
                 return UITableViewCell()

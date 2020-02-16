@@ -26,7 +26,7 @@ class ProfileView: UIView {
     }
     
     private func _setAppearance() {
-        self.backgroundColor = Palette.backgroundColor
+        self.backgroundColor = Palette.coffeeColor
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = _vc

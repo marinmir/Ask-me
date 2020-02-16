@@ -30,6 +30,7 @@ class SignOutCell: UITableViewCell {
         _signOutBtn.translatesAutoresizingMaskIntoConstraints = false
         _signOutBtn.setTitle("Exit", for: .normal)
         _signOutBtn.setTitleColor(.black, for: .normal)
+        _signOutBtn.contentHorizontalAlignment = .left
         
         contentView.addSubview(_signOutBtn)
         

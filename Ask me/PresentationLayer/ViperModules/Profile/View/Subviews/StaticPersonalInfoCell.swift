@@ -40,10 +40,10 @@ class StaticPersonalInfoCell: UITableViewCell {
             _nameLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             _nameLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
             _nameLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-            _nameLbl.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -4),
+            _nameLbl.widthAnchor.constraint(equalToConstant: 100),
             _nameLbl.heightAnchor.constraint(equalToConstant: 44),
             
-            _valueLbl.leadingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 4),
+            _valueLbl.leadingAnchor.constraint(equalTo: _nameLbl.trailingAnchor, constant: 4),
             _valueLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             _valueLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
             _valueLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),

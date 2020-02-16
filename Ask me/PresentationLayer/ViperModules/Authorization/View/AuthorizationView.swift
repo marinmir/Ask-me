@@ -11,7 +11,6 @@ import UIKit
 
 class AuthorizationView: UIView {
     
-    
     init(viewController vc: AuthorizationViewController) {
         _vc = vc
         
@@ -25,29 +24,40 @@ class AuthorizationView: UIView {
     
     func setActiveSendBtn() {
         _sendBtn.isEnabled = true
-        _sendBtn.backgroundColor = Palette.whiteText
+        _sendBtn.backgroundColor = Palette.darkTurquoiseColor
     }
     
     func setInactiveSendBtn() {
         _sendBtn.isEnabled = false
-        _sendBtn.backgroundColor = Palette.inactiveGray
+        _sendBtn.backgroundColor = Palette.turquoiseColor
     }
     
     func getPhoneNumberText() -> String {
         return _phoneTextField.text ?? ""
     }
     
+    @objc
+    private func _hideKeyboard() {
+        if _phoneTextField.isFirstResponder {
+            _phoneTextField.resignFirstResponder()
+        }
+    }
+    
     private func _setAppearance() {
-        self.backgroundColor = Palette.backgroundColor
+        self.backgroundColor = Palette.coffeeColor
         
         _backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(_hideKeyboard))
+        _backgroundView.addGestureRecognizer(tapGesture)
+        _backgroundView.isUserInteractionEnabled = true
         addSubview(_backgroundView)
         
         _invitationLabel.text = "We will send SMS with verification code, please, enter your phone number"
         _invitationLabel.numberOfLines = 0
         _invitationLabel.translatesAutoresizingMaskIntoConstraints = false
-        _invitationLabel.textAlignment = .justified
-        _invitationLabel.textColor = Palette.whiteText
+        _invitationLabel.textAlignment = .center
+        _invitationLabel.font = _invitationLabel.font.withSize(18)
+        _invitationLabel.textColor = Palette.almostWhite
         addSubview(_invitationLabel)
         
         _phoneTextField.delegate = _vc
@@ -56,19 +66,19 @@ class AuthorizationView: UIView {
         _phoneTextField.withFlag = true
         _phoneTextField.translatesAutoresizingMaskIntoConstraints = false
         _phoneTextField.layer.cornerRadius = 5
-        _phoneTextField.layer.borderColor = Palette.seconderyColor.cgColor
+        _phoneTextField.layer.borderColor = Palette.turquoiseColor.cgColor
         _phoneTextField.layer.borderWidth = 1
-        
         _phoneTextField.textContentType = .telephoneNumber
-
+        _phoneTextField.backgroundColor = Palette.almostWhite
+        _phoneTextField.textColor = Palette.darkTurquoiseColor
         addSubview(_phoneTextField)
         
         _sendBtn.translatesAutoresizingMaskIntoConstraints = false
         setInactiveSendBtn()
         _sendBtn.setTitle("Send", for: .normal)
-        _sendBtn.setTitleColor(Palette.mainColor, for: .normal)
+        _sendBtn.setTitleColor(Palette.almostWhite, for: .normal)
         _sendBtn.layer.cornerRadius = 5
-        _sendBtn.layer.borderColor = Palette.seconderyColor.cgColor
+        _sendBtn.layer.borderColor = Palette.almostWhite.cgColor
         _sendBtn.layer.borderWidth = 1
         
         _sendBtn.addTarget(_vc, action: #selector(_vc.onSendBtn), for: .touchUpInside)

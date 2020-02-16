@@ -43,9 +43,24 @@
 		0EC13D9523DCC98300685318 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9423DCC98300685318 /* NotificationsViewController.swift */; };
 		0EC13D9923DCCC1C00685318 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9823DCCC1C00685318 /* ProfileView.swift */; };
 		0EC13D9B23DCCC4600685318 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9A23DCCC4600685318 /* ProfileViewController.swift */; };
+		0EC6436723F48EEA009EA26F /* Pods_Ask_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */; };
+		0EC6436823F48EEA009EA26F /* Pods_Ask_me.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0EE6A3C023F32B0F0016EB2C /* StaticPersonalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */; };
-		55A70051EF162E073B7C0EA3 /* Pods_Ask_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0EC6436923F48EEA009EA26F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0EC6436823F48EEA009EA26F /* Pods_Ask_me.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0E0163DE23EB53D500D4B9D9 /* VerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationInteractor.swift; sourceTree = "<group>"; };
@@ -97,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A70051EF162E073B7C0EA3 /* Pods_Ask_me.framework in Frameworks */,
+				0EC6436723F48EEA009EA26F /* Pods_Ask_me.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +499,7 @@
 				0E78BD3A23D0F621009CCDC7 /* Frameworks */,
 				0E78BD3B23D0F621009CCDC7 /* Resources */,
 				F044C3620314FDB0535A2E97 /* [CP] Embed Pods Frameworks */,
+				0EC6436923F48EEA009EA26F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
