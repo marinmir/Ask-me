@@ -10,7 +10,11 @@
 		0E0163DF23EB53D500D4B9D9 /* VerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0163DE23EB53D500D4B9D9 /* VerificationInteractor.swift */; };
 		0E0163E123EB540600D4B9D9 /* VerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0163E023EB540600D4B9D9 /* VerificationPresenter.swift */; };
 		0E0163E423EB653300D4B9D9 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0163E323EB653300D4B9D9 /* MainRouter.swift */; };
-		0E0CDC9323DE416F002C3E8D /* testDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CDC9223DE416F002C3E8D /* testDB.swift */; };
+		0E0CDC9323DE416F002C3E8D /* FirebaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CDC9223DE416F002C3E8D /* FirebaseReader.swift */; };
+		0E0F776F23FA94C5003DAAE9 /* AddPollRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F776E23FA94C5003DAAE9 /* AddPollRouter.swift */; };
+		0E0F777223FA94FA003DAAE9 /* AddPollPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777123FA94FA003DAAE9 /* AddPollPresenter.swift */; };
+		0E0F777523FA9527003DAAE9 /* AddPollInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777423FA9527003DAAE9 /* AddPollInteractor.swift */; };
+		0E0F777723FAA441003DAAE9 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777623FAA441003DAAE9 /* DatePickerCell.swift */; };
 		0E1C9BC523DA3FA000F47845 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C9BC423DA3FA000F47845 /* SearchView.swift */; };
 		0E1C9BC723DA3FB100F47845 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C9BC623DA3FB100F47845 /* SearchViewController.swift */; };
 		0E1C9BCB23DA45F600F47845 /* AddPollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C9BCA23DA45F600F47845 /* AddPollView.swift */; };
@@ -45,6 +49,9 @@
 		0EC13D9B23DCCC4600685318 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9A23DCCC4600685318 /* ProfileViewController.swift */; };
 		0EC6436723F48EEA009EA26F /* Pods_Ask_me.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */; };
 		0EC6436823F48EEA009EA26F /* Pods_Ask_me.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0ECC8B0323FC840F00CA21EE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC8B0223FC840F00CA21EE /* MainInteractor.swift */; };
+		0ECC8B0623FC843000CA21EE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC8B0523FC843000CA21EE /* MainPresenter.swift */; };
+		0ECC8B0823FC94D800CA21EE /* FirebaseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC8B0723FC94D800CA21EE /* FirebaseWriter.swift */; };
 		0EE6A3C023F32B0F0016EB2C /* StaticPersonalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +73,11 @@
 		0E0163DE23EB53D500D4B9D9 /* VerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationInteractor.swift; sourceTree = "<group>"; };
 		0E0163E023EB540600D4B9D9 /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
 		0E0163E323EB653300D4B9D9 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
-		0E0CDC9223DE416F002C3E8D /* testDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testDB.swift; sourceTree = "<group>"; };
+		0E0CDC9223DE416F002C3E8D /* FirebaseReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReader.swift; sourceTree = "<group>"; };
+		0E0F776E23FA94C5003DAAE9 /* AddPollRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollRouter.swift; sourceTree = "<group>"; };
+		0E0F777123FA94FA003DAAE9 /* AddPollPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollPresenter.swift; sourceTree = "<group>"; };
+		0E0F777423FA9527003DAAE9 /* AddPollInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollInteractor.swift; sourceTree = "<group>"; };
+		0E0F777623FAA441003DAAE9 /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
 		0E1C9BC423DA3FA000F47845 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		0E1C9BC623DA3FB100F47845 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0E1C9BCA23DA45F600F47845 /* AddPollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollView.swift; sourceTree = "<group>"; };
@@ -101,6 +112,9 @@
 		0EC13D9423DCC98300685318 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		0EC13D9823DCCC1C00685318 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0EC13D9A23DCCC4600685318 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		0ECC8B0223FC840F00CA21EE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		0ECC8B0523FC843000CA21EE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		0ECC8B0723FC94D800CA21EE /* FirebaseWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWriter.swift; sourceTree = "<group>"; };
 		0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPersonalInfoCell.swift; sourceTree = "<group>"; };
 		6A19736048ED126DF5AE899D /* Pods-Ask me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ask me.debug.xcconfig"; path = "Target Support Files/Pods-Ask me/Pods-Ask me.debug.xcconfig"; sourceTree = "<group>"; };
 		9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ask_me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,9 +160,26 @@
 		0E0CDC9123DE3FBB002C3E8D /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				0E0CDC9223DE416F002C3E8D /* testDB.swift */,
+				0E0CDC9223DE416F002C3E8D /* FirebaseReader.swift */,
+				0ECC8B0723FC94D800CA21EE /* FirebaseWriter.swift */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		0E0F777023FA94DA003DAAE9 /* Presenter  */ = {
+			isa = PBXGroup;
+			children = (
+				0E0F777123FA94FA003DAAE9 /* AddPollPresenter.swift */,
+			);
+			path = "Presenter ";
+			sourceTree = "<group>";
+		};
+		0E0F777323FA950D003DAAE9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0E0F777423FA9527003DAAE9 /* AddPollInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		0E1C9BC223DA3F7A00F47845 /* Search */ = {
@@ -171,6 +202,9 @@
 		0E1C9BC823DA459600F47845 /* AddPoll */ = {
 			isa = PBXGroup;
 			children = (
+				0E0F777323FA950D003DAAE9 /* Interactor */,
+				0E0F777023FA94DA003DAAE9 /* Presenter  */,
+				0E459D8C23FA8F480024C55B /* Router */,
 				0E1C9BC923DA45D700F47845 /* View */,
 			);
 			path = AddPoll;
@@ -244,6 +278,8 @@
 		0E438EF223D243FE00D7E32A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				0ECC8B0423FC841700CA21EE /* Presenter */,
+				0ECC8B0123FC83EF00CA21EE /* Interactor */,
 				0E0163E223EB652600D4B9D9 /* Router */,
 				0E438EF323D2440900D7E32A /* View */,
 			);
@@ -256,6 +292,14 @@
 				0E438EF423D2442400D7E32A /* MainViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0E459D8C23FA8F480024C55B /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				0E0F776E23FA94C5003DAAE9 /* AddPollRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		0E48A4AC23E223B5007A75B9 /* ModelLayer */ = {
@@ -296,6 +340,7 @@
 				0E4EDF7423EE02C8007E3481 /* AvatarCell.swift */,
 				0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */,
 				0E2C319323F4463B001A1676 /* SignOutCell.swift */,
+				0E0F777623FAA441003DAAE9 /* DatePickerCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -470,6 +515,22 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		0ECC8B0123FC83EF00CA21EE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC8B0223FC840F00CA21EE /* MainInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0ECC8B0423FC841700CA21EE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0ECC8B0523FC843000CA21EE /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		102EB5831A66340EBA2BA5D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -605,7 +666,7 @@
 			files = (
 				0E9BA30223E36A4800A5AA61 /* AuthorizationRouter.swift in Sources */,
 				0E1C9BCD23DA464100F47845 /* AddPollViewController.swift in Sources */,
-				0E0CDC9323DE416F002C3E8D /* testDB.swift in Sources */,
+				0E0CDC9323DE416F002C3E8D /* FirebaseReader.swift in Sources */,
 				0E0163E123EB540600D4B9D9 /* VerificationPresenter.swift in Sources */,
 				0E9BA2FC23E3679800A5AA61 /* VerificationViewController.swift in Sources */,
 				0E9BA30523E36ACB00A5AA61 /* VerificationRouter.swift in Sources */,
@@ -614,6 +675,7 @@
 				0E78BD4523D0F621009CCDC7 /* HomeViewController.swift in Sources */,
 				0E4EDF6F23EDEC70007E3481 /* ProfilePresenter.swift in Sources */,
 				0E9BA2FA23E3676700A5AA61 /* VerificationView.swift in Sources */,
+				0ECC8B0823FC94D800CA21EE /* FirebaseWriter.swift in Sources */,
 				0E4EDF7523EE02C8007E3481 /* AvatarCell.swift in Sources */,
 				0E0163E423EB653300D4B9D9 /* MainRouter.swift in Sources */,
 				0E1C9BC723DA3FB100F47845 /* SearchViewController.swift in Sources */,
@@ -623,11 +685,14 @@
 				0E78BD4123D0F621009CCDC7 /* AppDelegate.swift in Sources */,
 				0EA1A47A23E9F0D80066DE82 /* AuthorizationInteractor.swift in Sources */,
 				0E9BA2F323E3433100A5AA61 /* AuthorizationViewController.swift in Sources */,
+				0E0F776F23FA94C5003DAAE9 /* AddPollRouter.swift in Sources */,
 				0E48A4AE23E223E6007A75B9 /* User.swift in Sources */,
 				0E9BA2F623E34B4400A5AA61 /* PhoneTextField.swift in Sources */,
 				0EA1A47723E9D7A00066DE82 /* Palette.swift in Sources */,
 				0E78BD4323D0F621009CCDC7 /* SceneDelegate.swift in Sources */,
+				0E0F777223FA94FA003DAAE9 /* AddPollPresenter.swift in Sources */,
 				0E1C9BC523DA3FA000F47845 /* SearchView.swift in Sources */,
+				0E0F777723FAA441003DAAE9 /* DatePickerCell.swift in Sources */,
 				0E9BA2FF23E3690C00A5AA61 /* AuthorizationPresenter.swift in Sources */,
 				0E4EDF6C23EDEC3A007E3481 /* ProfileRouter.swift in Sources */,
 				0EC13D9523DCC98300685318 /* NotificationsViewController.swift in Sources */,
@@ -635,8 +700,11 @@
 				0E438EF523D2442400D7E32A /* MainViewController.swift in Sources */,
 				0EE6A3C023F32B0F0016EB2C /* StaticPersonalInfoCell.swift in Sources */,
 				0E9BA2F123E342EC00A5AA61 /* AuthorizationView.swift in Sources */,
+				0ECC8B0623FC843000CA21EE /* MainPresenter.swift in Sources */,
+				0E0F777523FA9527003DAAE9 /* AddPollInteractor.swift in Sources */,
 				0E1C9BCB23DA45F600F47845 /* AddPollView.swift in Sources */,
 				0E0163DF23EB53D500D4B9D9 /* VerificationInteractor.swift in Sources */,
+				0ECC8B0323FC840F00CA21EE /* MainInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 class MainViewController: UITabBarController, UITabBarControllerDelegate {
+     var presenter: MainPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -106,7 +107,7 @@ class MainViewController: UITabBarController, UITabBarControllerDelegate {
     
     private let _homeTabController = HomeViewController()
     private let _searchTabController = SearchViewController()
-    private let _addPollTabController = AddPollViewController()
+    private let _addPollTabController = AddPollRouter.createModule()
     private let _notificationTabController = NotificationsViewController()
     private let _profileTabController = ProfileRouter.createModule()
 }

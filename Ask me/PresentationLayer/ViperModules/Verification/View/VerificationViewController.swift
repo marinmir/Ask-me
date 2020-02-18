@@ -55,7 +55,7 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString
         
-        let shouldAcceptInput = newString.length <= maxLength
+        let shouldAcceptInput = newString.length <= maxLength && string.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil
         
         if newString.length != maxLength {
              _view.setInactiveEnterBtn()
@@ -65,6 +65,11 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         
         return shouldAcceptInput
     }
+    
+    //to prohobit letters
+   /* func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        return string.rangeOfCharacter(from: CharacterSet.letters) == nil
+    } */
     
     @objc
     func onEnterBtn() {

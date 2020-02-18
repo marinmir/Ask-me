@@ -12,6 +12,17 @@ class MainRouter {
     
     static func createModule() -> UIViewController {
         let vc = MainViewController()
+        let interactor = MainInteractor()
+        let presenter = MainPresenter()
+        let router = MainRouter()
+        
+        interactor.presenter = presenter
+        
+        presenter.interactor = interactor
+        presenter.router = router
+        presenter.viewController = vc
+        
+        vc.presenter = presenter
         
         return vc
     }
