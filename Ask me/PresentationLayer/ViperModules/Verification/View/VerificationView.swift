@@ -6,100 +6,102 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class VerificationView: UIView {
+    // MARK: - Properties
+    private weak var vc: VerificationViewController?
     
+    private let verificationTextField = UITextField()
+    private let enterButton = UIButton()
+    private let backgroundView = UIImageView(image: UIImage(named: "VerificationBackground"))
+    
+    // MARK: - Public methods
     init(viewController vc: VerificationViewController) {
-        _vc = vc
+        self.vc = vc
         
         super.init(frame: CGRect.zero)
-        _setAppearance()
         
+        setAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setActiveEnterBtn() {
-        _enterBtn.isEnabled = true
-        _enterBtn.backgroundColor = Palette.darkCoffeeColor
+    func setActiveEnterBtn() -> Void {
+        enterButton.isEnabled = true
+        enterButton.backgroundColor = Palette.darkCoffeeColor
     }
     
-    func setInactiveEnterBtn() {
-        _enterBtn.isEnabled = false
-        _enterBtn.backgroundColor = Palette.coffeeColor
+    func setInactiveEnterBtn() -> Void {
+        enterButton.isEnabled = false
+        enterButton.backgroundColor = Palette.coffeeColor
     }
     
-    func getVerificationCode()->String {
-        return _verificationTextField.text ?? ""
+    func getVerificationCode() -> String {
+        return verificationTextField.text ?? ""
     }
     
+    // MARK: - Private methods
     @objc
-    private func _hideKeyboard() {
-        if _verificationTextField.isFirstResponder {
-            _verificationTextField.resignFirstResponder()
+    private func hideKeyboard() -> Void {
+        if verificationTextField.isFirstResponder {
+            verificationTextField.resignFirstResponder()
         }
     }
     
-    private func _setAppearance() {
+    private func setAppearance() -> Void {
         self.backgroundColor = UIColor.white
         
-        _backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        _backgroundView.translatesAutoresizingMaskIntoConstraints = false
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(_hideKeyboard))
-        _backgroundView.addGestureRecognizer(tapGesture)
-        _backgroundView.isUserInteractionEnabled = true
-        addSubview(_backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        backgroundView.addGestureRecognizer(tapGesture)
+        backgroundView.isUserInteractionEnabled = true
+        addSubview(backgroundView)
         
-        _verificationTextField.delegate = _vc
-        _verificationTextField.translatesAutoresizingMaskIntoConstraints = false
+        verificationTextField.delegate = vc
+        verificationTextField.translatesAutoresizingMaskIntoConstraints = false
         if #available(iOS 12.0, *) {
-            _verificationTextField.textContentType = .oneTimeCode
+            verificationTextField.textContentType = .oneTimeCode
         } else {
             // Fallback on earlier versions
         }
-        _verificationTextField.keyboardType = .numberPad
-        _verificationTextField.placeholder = "Verification code"
-        _verificationTextField.layer.cornerRadius = 5
-        _verificationTextField.layer.borderWidth = 1
-        _verificationTextField.layer.borderColor = Palette.darkCoffeeColor.cgColor
-        _verificationTextField.backgroundColor = Palette.almostWhite
-        _verificationTextField.textColor = Palette.darkCoffeeColor
-        addSubview(_verificationTextField)
+        verificationTextField.keyboardType = .numberPad
+        verificationTextField.placeholder = "Verification code"
+        verificationTextField.layer.cornerRadius = 5
+        verificationTextField.layer.borderWidth = 1
+        verificationTextField.layer.borderColor = Palette.darkCoffeeColor.cgColor
+        verificationTextField.backgroundColor = Palette.almostWhite
+        verificationTextField.textColor = Palette.darkCoffeeColor
+        addSubview(verificationTextField)
         
-        _enterBtn.translatesAutoresizingMaskIntoConstraints = false
+        enterButton.translatesAutoresizingMaskIntoConstraints = false
         setInactiveEnterBtn()
-        _enterBtn.setTitle("Enter", for: .normal)
-        _enterBtn.setTitleColor(Palette.almostWhite, for: .normal)
-        _enterBtn.layer.cornerRadius = 5
-        _enterBtn.layer.borderColor = Palette.darkCoffeeColor.cgColor
-        _enterBtn.layer.borderWidth = 1
-        _enterBtn.addTarget(_vc, action: #selector(_vc.onEnterBtn), for: .touchUpInside)
-        addSubview(_enterBtn)
+        enterButton.setTitle("Enter", for: .normal)
+        enterButton.setTitleColor(Palette.almostWhite, for: .normal)
+        enterButton.layer.cornerRadius = 5
+        enterButton.layer.borderColor = Palette.darkCoffeeColor.cgColor
+        enterButton.layer.borderWidth = 1
+        enterButton.addTarget(vc, action: #selector(vc!.onEnterBtn), for: .touchUpInside)
+        addSubview(enterButton)
         
          NSLayoutConstraint.activate([
-            _backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
-            _backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            _backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            _backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            backgroundView.topAnchor.constraint(equalTo: self.topAnchor),
+            backgroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            backgroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
 
-            _verificationTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            _verificationTextField.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -15),
-            _verificationTextField.heightAnchor.constraint(equalToConstant: 40),
-            _verificationTextField.widthAnchor.constraint(equalToConstant: 250),
+            verificationTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            verificationTextField.bottomAnchor.constraint(equalTo: self.centerYAnchor, constant: -15),
+            verificationTextField.heightAnchor.constraint(equalToConstant: 40),
+            verificationTextField.widthAnchor.constraint(equalToConstant: 250),
             
-            _enterBtn.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            _enterBtn.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 15),
-            _enterBtn.heightAnchor.constraint(equalToConstant: 40),
-            _enterBtn.widthAnchor.constraint(equalToConstant: 250)
+            enterButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            enterButton.topAnchor.constraint(equalTo: self.centerYAnchor, constant: 15),
+            enterButton.heightAnchor.constraint(equalToConstant: 40),
+            enterButton.widthAnchor.constraint(equalToConstant: 250)
         ])
     }
-        
-        private let _vc: VerificationViewController
-        private let _verificationTextField = UITextField()
-        private let _enterBtn = UIButton()
-        private let _backgroundView = UIImageView(image: UIImage(named: "VerificationBackground"))
 }

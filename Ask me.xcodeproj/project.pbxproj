@@ -10,11 +10,12 @@
 		0E0163DF23EB53D500D4B9D9 /* VerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0163DE23EB53D500D4B9D9 /* VerificationInteractor.swift */; };
 		0E0163E123EB540600D4B9D9 /* VerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0163E023EB540600D4B9D9 /* VerificationPresenter.swift */; };
 		0E0163E423EB653300D4B9D9 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0163E323EB653300D4B9D9 /* MainRouter.swift */; };
+		0E0324D924056EF9001EEA06 /* GenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0324D824056EF9001EEA06 /* GenderCell.swift */; };
 		0E0CDC9323DE416F002C3E8D /* FirebaseReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0CDC9223DE416F002C3E8D /* FirebaseReader.swift */; };
 		0E0F776F23FA94C5003DAAE9 /* AddPollRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F776E23FA94C5003DAAE9 /* AddPollRouter.swift */; };
 		0E0F777223FA94FA003DAAE9 /* AddPollPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777123FA94FA003DAAE9 /* AddPollPresenter.swift */; };
 		0E0F777523FA9527003DAAE9 /* AddPollInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777423FA9527003DAAE9 /* AddPollInteractor.swift */; };
-		0E0F777723FAA441003DAAE9 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777623FAA441003DAAE9 /* DatePickerCell.swift */; };
+		0E0F777723FAA441003DAAE9 /* BirthdayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F777623FAA441003DAAE9 /* BirthdayCell.swift */; };
 		0E1C9BC523DA3FA000F47845 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C9BC423DA3FA000F47845 /* SearchView.swift */; };
 		0E1C9BC723DA3FB100F47845 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C9BC623DA3FB100F47845 /* SearchViewController.swift */; };
 		0E1C9BCB23DA45F600F47845 /* AddPollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1C9BCA23DA45F600F47845 /* AddPollView.swift */; };
@@ -43,6 +44,8 @@
 		0E9BA30523E36ACB00A5AA61 /* VerificationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BA30423E36ACB00A5AA61 /* VerificationRouter.swift */; };
 		0EA1A47723E9D7A00066DE82 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A47623E9D7A00066DE82 /* Palette.swift */; };
 		0EA1A47A23E9F0D80066DE82 /* AuthorizationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA1A47923E9F0D80066DE82 /* AuthorizationInteractor.swift */; };
+		0EC0AFF223FF15CD001B28BA /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0AFF123FF15CD001B28BA /* UserService.swift */; };
+		0EC0AFF423FF1DB6001B28BA /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC0AFF323FF1DB6001B28BA /* Assembly.swift */; };
 		0EC13D9323DCC90400685318 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9223DCC90400685318 /* NotificationsView.swift */; };
 		0EC13D9523DCC98300685318 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9423DCC98300685318 /* NotificationsViewController.swift */; };
 		0EC13D9923DCCC1C00685318 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EC13D9823DCCC1C00685318 /* ProfileView.swift */; };
@@ -73,11 +76,12 @@
 		0E0163DE23EB53D500D4B9D9 /* VerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationInteractor.swift; sourceTree = "<group>"; };
 		0E0163E023EB540600D4B9D9 /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
 		0E0163E323EB653300D4B9D9 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		0E0324D824056EF9001EEA06 /* GenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCell.swift; sourceTree = "<group>"; };
 		0E0CDC9223DE416F002C3E8D /* FirebaseReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseReader.swift; sourceTree = "<group>"; };
 		0E0F776E23FA94C5003DAAE9 /* AddPollRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollRouter.swift; sourceTree = "<group>"; };
 		0E0F777123FA94FA003DAAE9 /* AddPollPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollPresenter.swift; sourceTree = "<group>"; };
 		0E0F777423FA9527003DAAE9 /* AddPollInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollInteractor.swift; sourceTree = "<group>"; };
-		0E0F777623FAA441003DAAE9 /* DatePickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerCell.swift; sourceTree = "<group>"; };
+		0E0F777623FAA441003DAAE9 /* BirthdayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayCell.swift; sourceTree = "<group>"; };
 		0E1C9BC423DA3FA000F47845 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		0E1C9BC623DA3FB100F47845 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		0E1C9BCA23DA45F600F47845 /* AddPollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPollView.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 		0E9BA30423E36ACB00A5AA61 /* VerificationRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationRouter.swift; sourceTree = "<group>"; };
 		0EA1A47623E9D7A00066DE82 /* Palette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		0EA1A47923E9F0D80066DE82 /* AuthorizationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationInteractor.swift; sourceTree = "<group>"; };
+		0EC0AFF123FF15CD001B28BA /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		0EC0AFF323FF1DB6001B28BA /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		0EC13D9223DCC90400685318 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		0EC13D9423DCC98300685318 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		0EC13D9823DCCC1C00685318 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -230,6 +236,7 @@
 		0E438EED23D242CC00D7E32A /* BusinessLogicLayer */ = {
 			isa = PBXGroup;
 			children = (
+				0EC0AFF023FF15B1001B28BA /* Services */,
 			);
 			path = BusinessLogicLayer;
 			sourceTree = "<group>";
@@ -340,7 +347,8 @@
 				0E4EDF7423EE02C8007E3481 /* AvatarCell.swift */,
 				0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */,
 				0E2C319323F4463B001A1676 /* SignOutCell.swift */,
-				0E0F777623FAA441003DAAE9 /* DatePickerCell.swift */,
+				0E0F777623FAA441003DAAE9 /* BirthdayCell.swift */,
+				0E0324D824056EF9001EEA06 /* GenderCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -376,6 +384,7 @@
 				0E78BD4B23D0F622009CCDC7 /* LaunchScreen.storyboard */,
 				0E78BD4E23D0F622009CCDC7 /* Info.plist */,
 				0E78BD5423D0F85A009CCDC7 /* GoogleService-Info.plist */,
+				0EC0AFF323FF1DB6001B28BA /* Assembly.swift */,
 			);
 			path = "Ask me";
 			sourceTree = "<group>";
@@ -475,6 +484,14 @@
 				0EA1A47923E9F0D80066DE82 /* AuthorizationInteractor.swift */,
 			);
 			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0EC0AFF023FF15B1001B28BA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				0EC0AFF123FF15CD001B28BA /* UserService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		0EC13D9023DCC7DF00685318 /* Notifications */ = {
@@ -678,10 +695,12 @@
 				0ECC8B0823FC94D800CA21EE /* FirebaseWriter.swift in Sources */,
 				0E4EDF7523EE02C8007E3481 /* AvatarCell.swift in Sources */,
 				0E0163E423EB653300D4B9D9 /* MainRouter.swift in Sources */,
+				0EC0AFF223FF15CD001B28BA /* UserService.swift in Sources */,
 				0E1C9BC723DA3FB100F47845 /* SearchViewController.swift in Sources */,
 				0EC13D9923DCCC1C00685318 /* ProfileView.swift in Sources */,
 				0E4EDF7223EDEC9C007E3481 /* ProfileInteractor.swift in Sources */,
 				0E438EEB23D23C0100D7E32A /* HomeView.swift in Sources */,
+				0EC0AFF423FF1DB6001B28BA /* Assembly.swift in Sources */,
 				0E78BD4123D0F621009CCDC7 /* AppDelegate.swift in Sources */,
 				0EA1A47A23E9F0D80066DE82 /* AuthorizationInteractor.swift in Sources */,
 				0E9BA2F323E3433100A5AA61 /* AuthorizationViewController.swift in Sources */,
@@ -692,7 +711,7 @@
 				0E78BD4323D0F621009CCDC7 /* SceneDelegate.swift in Sources */,
 				0E0F777223FA94FA003DAAE9 /* AddPollPresenter.swift in Sources */,
 				0E1C9BC523DA3FA000F47845 /* SearchView.swift in Sources */,
-				0E0F777723FAA441003DAAE9 /* DatePickerCell.swift in Sources */,
+				0E0F777723FAA441003DAAE9 /* BirthdayCell.swift in Sources */,
 				0E9BA2FF23E3690C00A5AA61 /* AuthorizationPresenter.swift in Sources */,
 				0E4EDF6C23EDEC3A007E3481 /* ProfileRouter.swift in Sources */,
 				0EC13D9523DCC98300685318 /* NotificationsViewController.swift in Sources */,
@@ -702,6 +721,7 @@
 				0E9BA2F123E342EC00A5AA61 /* AuthorizationView.swift in Sources */,
 				0ECC8B0623FC843000CA21EE /* MainPresenter.swift in Sources */,
 				0E0F777523FA9527003DAAE9 /* AddPollInteractor.swift in Sources */,
+				0E0324D924056EF9001EEA06 /* GenderCell.swift in Sources */,
 				0E1C9BCB23DA45F600F47845 /* AddPollView.swift in Sources */,
 				0E0163DF23EB53D500D4B9D9 /* VerificationInteractor.swift in Sources */,
 				0ECC8B0323FC840F00CA21EE /* MainInteractor.swift in Sources */,

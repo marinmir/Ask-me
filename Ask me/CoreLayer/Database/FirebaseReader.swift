@@ -1,5 +1,5 @@
 //
-//  testDB.swift
+//  FirebaseReader.swift
 //  Ask me
 //
 //  Created by Мирошниченко Марина on 27.01.2020.
@@ -10,7 +10,10 @@ import UIKit
 import Firebase
 
 class FirebaseReader {
+    // MARK: - Properties
+    private let ref: DatabaseReference
     
+    // MARK: - Public methods
     init() {
         ref = Database.database().reference()
     }
@@ -18,6 +21,7 @@ class FirebaseReader {
     func subscribeOnDictionary(forPath path: String, onChange callback: @escaping ([String: Any]) -> Void) {
         ref.child(path).observe(.value, with: { snapshot in
             guard let json = snapshot.value as? [String: Any] else {
+                callback([:])
                 return
             }
             
@@ -34,6 +38,4 @@ class FirebaseReader {
             callback(json)
         })
     }
-    
-    private let ref: DatabaseReference
 }

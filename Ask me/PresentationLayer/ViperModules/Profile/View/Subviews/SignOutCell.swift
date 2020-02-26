@@ -6,43 +6,44 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class SignOutCell: UITableViewCell {
+    //MARK: - Properties
     static let identifier = "SignOutCell"
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier ?? StaticPersonalInfoCell.identifier)
-        
-        _setAppearance()
-    }
+    private let signOutButton = UIButton(frame: CGRect.zero)
     
+    //MARK: - Public methods
+    init () {
+        super.init(style: .default, reuseIdentifier: SignOutCell.identifier)
+        
+        setAppearance()
+    }
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
       
-    func setOnTapCallback(with viewController: ProfileViewController) {
-        _signOutBtn.addTarget(viewController, action: #selector(viewController.onSignOutCellTap), for: .touchUpInside)
+    func setOnTapCallback(with viewController: ProfileViewController) -> Void {
+        signOutButton.addTarget(viewController, action: #selector(viewController.onSignOutCellTap), for: .touchUpInside)
     }
     
-    private func _setAppearance() {
-        _signOutBtn.translatesAutoresizingMaskIntoConstraints = false
-        _signOutBtn.setTitle("Exit", for: .normal)
-        _signOutBtn.setTitleColor(.black, for: .normal)
-        _signOutBtn.contentHorizontalAlignment = .left
-        
-        contentView.addSubview(_signOutBtn)
+    //MARK: - Private mothods
+    private func setAppearance() -> Void {
+        signOutButton.translatesAutoresizingMaskIntoConstraints = false
+        signOutButton.setTitle("Exit", for: .normal)
+        signOutButton.setTitleColor(.black, for: .normal)
+        signOutButton.contentHorizontalAlignment = .left
+        contentView.addSubview(signOutButton)
         
         NSLayoutConstraint.activate([
-            _signOutBtn.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            _signOutBtn.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            _signOutBtn.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            _signOutBtn.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-            _signOutBtn.heightAnchor.constraint(equalToConstant: 44),
-            _signOutBtn.widthAnchor.constraint(equalToConstant: 152)
+            signOutButton.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            signOutButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            signOutButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            signOutButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            signOutButton.heightAnchor.constraint(equalToConstant: 44),
+            signOutButton.widthAnchor.constraint(equalToConstant: 152)
         ])
     }
-    
-    private let _signOutBtn = UIButton(frame: CGRect.zero)
 }

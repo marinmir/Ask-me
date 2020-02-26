@@ -6,51 +6,55 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class AvatarCell: UITableViewCell {
+    // MARK: - Properties
     static let identifier = "AvatarCell"
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier ?? AvatarCell.identifier)
+    private var userAvatar = UIImage(named: "user")
+    private var userAvatarView: UIImageView?
+    private let nicknameTextField = UITextField(frame: CGRect.zero)
+    private var vc: ProfileViewController
+    
+    // MARK: - Public methods
+    init (viewController vc: ProfileViewController) {
+        self.vc = vc
+        userAvatarView = UIImageView(image: userAvatar)
         
-        _userAvatarView = UIImageView(image: _userAvatar)
+        super.init(style: .default, reuseIdentifier: AvatarCell.identifier)
         
-        _setAppearance()
+        setAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setNewUserAvatar(new image: UIImage) {
-        _userAvatar = image
+    func setContent(userImage image: UIImage, userNickname nickname: String) -> Void {
+        userAvatar = image
+        nicknameTextField.text = nickname
     }
     
-    func getUserAvatar() -> UIImage {
-        return _userAvatar ?? UIImage(named: "user")!
-    }
-    
-    private func _setAppearance() {
-        
-        guard let userAvatarView = _userAvatarView
-            else {
-                return
-            }
+    // MARK: - Private methods
+    private func setAppearance() -> Void {
+        guard let userAvatarView = userAvatarView else {
+            return
+        }
         userAvatarView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(userAvatarView)
         
-        _nicknameTextField.translatesAutoresizingMaskIntoConstraints = false
-        _nicknameTextField.placeholder = "Nickname"
-        _nicknameTextField.textContentType = .nickname
-        _nicknameTextField.layer.cornerRadius = 5
-        _nicknameTextField.borderStyle = .roundedRect
-        _nicknameTextField.layer.borderWidth = 1
-        _nicknameTextField.layer.borderColor = Palette.darkCoffeeColor.cgColor
-        _nicknameTextField.textColor = Palette.darkCoffeeColor
-        _nicknameTextField.autocapitalizationType = .words
-        contentView.addSubview(_nicknameTextField)
+        nicknameTextField.translatesAutoresizingMaskIntoConstraints = false
+        nicknameTextField.placeholder = "Nickname"
+        nicknameTextField.textContentType = .nickname
+        nicknameTextField.layer.cornerRadius = 5
+        nicknameTextField.borderStyle = .roundedRect
+        nicknameTextField.layer.borderWidth = 1
+        nicknameTextField.layer.borderColor = Palette.darkCoffeeColor.cgColor
+        nicknameTextField.textColor = Palette.darkCoffeeColor
+        nicknameTextField.delegate = self
+        nicknameTextField.autocapitalizationType = .words
+        contentView.addSubview(nicknameTextField)
         
         NSLayoutConstraint.activate([
             userAvatarView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
@@ -60,14 +64,22 @@ class AvatarCell: UITableViewCell {
             userAvatarView.widthAnchor.constraint(equalToConstant: 80),
             userAvatarView.heightAnchor.constraint(equalToConstant: 80),
             
-            _nicknameTextField.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
-            _nicknameTextField.leadingAnchor.constraint(equalTo: userAvatarView.trailingAnchor, constant: 7),
-            _nicknameTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -7),
-            _nicknameTextField.heightAnchor.constraint(equalToConstant: 40)
+            nicknameTextField.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            nicknameTextField.leadingAnchor.constraint(equalTo: userAvatarView.trailingAnchor, constant: 7),
+            nicknameTextField.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -7),
+            nicknameTextField.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
-    
-    private var _userAvatar = UIImage(named: "user")
-    private var _userAvatarView: UIImageView?
-    private let _nicknameTextField = UITextField(frame: CGRect.zero)
+}
+
+//MARK: - UITextFieldDelegate
+extension AvatarCell: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    func textFieldDidEndEditing(_ textField: UITextField) -> Void {
+        vc.onNicknameEditingFinished(with: nicknameTextField.text ?? " ")
+    }
 }

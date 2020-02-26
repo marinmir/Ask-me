@@ -6,11 +6,10 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class VerificationRouter {
-    
+    // MARK: - Public methods
     static func createModule() -> UIViewController {
         let presenter = VerificationPresenter()
         let interactor = VerificationInteractor()
@@ -28,7 +27,7 @@ class VerificationRouter {
         return viewController
     }
     
-    func openMainModule(with viewController: UIViewController) {
+    func openMainModule(with viewController: UIViewController) -> Void {
         viewController.view.window?.rootViewController = MainRouter.createModule()
     }
 }

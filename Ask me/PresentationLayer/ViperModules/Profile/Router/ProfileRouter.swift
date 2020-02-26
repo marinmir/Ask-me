@@ -6,14 +6,13 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ProfileRouter {
-    
+    // MARK: - Public methods
     static func createModule() -> UIViewController {
         let viewController = ProfileViewController()
-        let interactor = ProfileInteractor()
+        let interactor = ProfileInteractor(Assembly.userService)
         let presenter = ProfilePresenter()
         let router = ProfileRouter()
         
@@ -28,7 +27,7 @@ class ProfileRouter {
         return viewController
     }
     
-    func openAuthorizationModule(with viewController: UIViewController) {
+    func openAuthorizationModule(with viewController: UIViewController) -> Void {
         viewController.view.window?.rootViewController = UINavigationController(rootViewController: AuthorizationRouter.createModule())
     }
 }

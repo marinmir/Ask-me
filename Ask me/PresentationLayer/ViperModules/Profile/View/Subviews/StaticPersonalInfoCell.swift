@@ -6,51 +6,53 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class StaticPersonalInfoCell: UITableViewCell {
+    // MARK: - Properties
     static let identifier = "StaticPersonalInfoCell"
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier ?? StaticPersonalInfoCell.identifier)
+    private let nameLabel = UILabel(frame: CGRect.zero)
+    private let valueLabel = UILabel(frame: CGRect.zero)
+    
+    //MARK: - Public methods
+    init () {
+        super.init(style: .default, reuseIdentifier: StaticPersonalInfoCell.identifier)
         
-        _setAppearance()
+        setAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
         
-    func setContent(name: String, value: String) {
-        _nameLbl.text = name
-        _valueLbl.text = value
+    func setContent(name: String, value: String) -> Void {
+        nameLabel.text = name
+        valueLabel.text = value
     }
     
-    private func _setAppearance() {
-        _nameLbl.translatesAutoresizingMaskIntoConstraints = false
-        _nameLbl.textAlignment = .left
-        contentView.addSubview(_nameLbl)
+    // MARK: - Private methods
+    private func setAppearance() -> Void{
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.textAlignment = .left
+        contentView.addSubview(nameLabel)
         
-        _valueLbl.translatesAutoresizingMaskIntoConstraints = false
-        _valueLbl.textAlignment = .right
-        contentView.addSubview(_valueLbl)
+        valueLabel.translatesAutoresizingMaskIntoConstraints = false
+        valueLabel.textAlignment = .right
+        contentView.addSubview(valueLabel)
         
         NSLayoutConstraint.activate([
-            _nameLbl.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            _nameLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            _nameLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-            _nameLbl.widthAnchor.constraint(equalToConstant: 100),
-            _nameLbl.heightAnchor.constraint(equalToConstant: 44),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            nameLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            nameLabel.widthAnchor.constraint(equalToConstant: 100),
+            nameLabel.heightAnchor.constraint(equalToConstant: 44),
             
-            _valueLbl.leadingAnchor.constraint(equalTo: _nameLbl.trailingAnchor, constant: 4),
-            _valueLbl.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            _valueLbl.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
-            _valueLbl.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
-            _valueLbl.heightAnchor.constraint(equalToConstant: 44)
+            valueLabel.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor, constant: 4),
+            valueLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            valueLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            valueLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
+            valueLabel.heightAnchor.constraint(equalToConstant: 44)
         ])
     }
-        
-    private let _nameLbl = UILabel(frame: CGRect.zero)
-    private let _valueLbl = UILabel(frame: CGRect.zero)
 }

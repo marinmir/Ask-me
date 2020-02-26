@@ -9,10 +9,10 @@
 import UIKit
 
 class MainRouter {
-    
+    // MARK: - Public methods
     static func createModule() -> UIViewController {
         let vc = MainViewController()
-        let interactor = MainInteractor()
+        let interactor = MainInteractor(Assembly.userService)
         let presenter = MainPresenter()
         let router = MainRouter()
         

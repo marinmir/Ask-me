@@ -9,5 +9,6 @@
 import Foundation
 
 class AddPollInteractor {
+    // MARK: - Properties
     var presenter: AddPollPresenter?
 }

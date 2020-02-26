@@ -9,19 +9,20 @@
 import Foundation
 
 class VerificationPresenter {
-
-    func onEnterBtn(with verificationCode: String) {
+    // MARK: - Properties
+    var router: VerificationRouter?
+    var interactor: VerificationInteractor?
+    var viewController: VerificationViewController?
+    
+    // MARK: - Public methods
+    func onEnterBtn(with verificationCode: String) -> Void {
         interactor?.verifyCode(for: verificationCode)
     }
     
-    func didAuthorizeUser() {
+    func didAuthorizeUser() -> Void {
         guard let vc = viewController else {
             return
         }
         router?.openMainModule(with: vc)
     }
-    
-    var router: VerificationRouter?
-    var interactor: VerificationInteractor?
-    var viewController: VerificationViewController?
 }

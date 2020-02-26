@@ -9,10 +9,15 @@
 import Foundation
 
 class MainPresenter {
-    init() {
-    }
-    
+    // MARK: - Properties
     var interactor: MainInteractor?
     var router: MainRouter?
     var viewController: MainViewController?
+    
+    // MARK: - Public methods
+    func onViewWillAppear() -> Void {
+        interactor?.getProfile(completion: { user in
+            // TODO: implement loading indicator open/close
+        })
+    }
 }

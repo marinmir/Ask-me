@@ -6,28 +6,27 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class AddPollView: UIView {
+    // MARK: - Properties
+     private weak var vc: AddPollViewController?
     
+    // MARK: - Public methods
     init(viewController vc: AddPollViewController) {
-        _vc = vc
+        self.vc = vc
         
         super.init(frame: CGRect.zero)
         
-        _setAppearance()
+        setAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func _setAppearance() {
+    // MARK: - Private methods
+    private func setAppearance() -> Void {
         self.backgroundColor = Palette.almostWhite
-        
-        
     }
-    
-    private let _vc: AddPollViewController
 }

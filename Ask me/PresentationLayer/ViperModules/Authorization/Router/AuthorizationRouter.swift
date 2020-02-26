@@ -6,15 +6,10 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class AuthorizationRouter {
-    
-    init() {
-        
-    }
-    
+    // MARK: - Public methods
     static func createModule() -> UIViewController {
         let presenter = AuthorizationPresenter()
         let viewController = AuthorizationViewController()
@@ -32,7 +27,7 @@ class AuthorizationRouter {
         return viewController
     }
     
-    func openVerificationModule(with viewController: UIViewController?) {
+    func openVerificationModule(with viewController: UIViewController?) -> Void {
         viewController?.navigationController?.pushViewController(VerificationRouter.createModule(), animated: true)
     }
 }

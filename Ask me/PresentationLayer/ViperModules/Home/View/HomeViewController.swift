@@ -9,15 +9,13 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-
+    // MARK: - Public methods
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     override func loadView() {
-        self.view = HomeView(self)
+        view = HomeView(self)
     }
-
 }
-

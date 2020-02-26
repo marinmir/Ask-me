@@ -11,25 +11,23 @@ import PhoneNumberKit
 import Firebase
 
 class AuthorizationInteractor {
+    // MARK: - Properties
+    var presenter: AuthorizationPresenter?
     
-    init() {
-    }
-    
-    func isValidPhoneNumber(phoneNumber number: String) -> Bool {
+    // MARK: - Public methods
+    func isValid(phoneNumber number: String) -> Bool {
         let phoneNumberKit = PhoneNumberKit()
     
         return phoneNumberKit.isValidPhoneNumber(number)
     }
     
-    func requestVerificationCode(for phoneNumber: String) {
+    func requestVerificationCode(for phoneNumber: String) -> Void {
         PhoneAuthProvider.provider().verifyPhoneNumber(phoneNumber, uiDelegate: nil) { (verificationID, error) in
-          if let error = error {
-            print(error.localizedDescription)
-            return
-          }
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
         }
     }
-    
-    var presenter: AuthorizationPresenter?
 }

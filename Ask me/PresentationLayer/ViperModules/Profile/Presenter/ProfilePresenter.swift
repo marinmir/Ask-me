@@ -9,17 +9,34 @@
 import Foundation
 
 class ProfilePresenter {
+    // MARK: - Properties
+    var interactor: ProfileInteractor?
+    var router: ProfileRouter?
+    var viewController: ProfileViewController?
     
+    // MARK: - Public methods
     func getUserPhoneNumber() -> String {
         return interactor?.getFormatterUserPhoneNumber() ?? ""
     }
     
-    func onSignOutCell() {
+    func getUser() -> User {
+        return interactor?.getUser() ?? User()
+    }
+    
+    func onSignOutCell() -> Void {
         interactor?.signOut()
         router?.openAuthorizationModule(with: viewController!)
     }
     
-    var interactor: ProfileInteractor?
-    var router: ProfileRouter?
-    var viewController: ProfileViewController?
+    func onNewNickname(with text: String) -> Void {
+        interactor?.updateNickname(with: text)
+    }
+    
+    func onNewBirthday(with date: Date) -> Void {
+        interactor?.updateBirthday(with: date)
+    }
+    
+    func onNewGender(with gender: Gender) -> Void {
+           interactor?.updateGender(with: gender)
+       }
 }

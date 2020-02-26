@@ -6,10 +6,10 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class AddPollRouter {
+    // MARK: - Public methods
     static func createModule() -> UIViewController {
         let viewController = AddPollViewController()
                let interactor = AddPollInteractor()

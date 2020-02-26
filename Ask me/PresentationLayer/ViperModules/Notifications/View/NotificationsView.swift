@@ -6,7 +6,6 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class NotificationsView: UIView {

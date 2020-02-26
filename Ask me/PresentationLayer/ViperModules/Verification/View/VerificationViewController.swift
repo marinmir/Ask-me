@@ -6,16 +6,24 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class VerificationViewController: UIViewController, UITextFieldDelegate {
+class VerificationViewController: UIViewController {
+    // MARK: - Properties
+    var presenter: VerificationPresenter?
+    
+    private var _view: VerificationView {
+        get {
+            return view as! VerificationView
+        }
+    }
    
+    // MARK: - Public methods
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
     
-    override func viewDidLoad() {
+    override func viewDidLoad() -> Void {
        super.viewDidLoad()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(sender:)), name: UIResponder.keyboardWillShowNotification, object: nil)
 
@@ -23,7 +31,7 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc
-    func keyboardWillShow(sender: NSNotification) {
+    func keyboardWillShow(sender: NSNotification) -> Void {
         if let keyboardFrame: NSValue = sender.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
@@ -32,23 +40,31 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc
-    func keyboardWillHide(sender: NSNotification) {
+    func keyboardWillHide(sender: NSNotification) -> Void {
          self.view.frame.origin.y = 0 // Move view to original position
     }
     
-    override func loadView() {
+    override func loadView() -> Void {
         super.loadView()
         
         view = VerificationView(viewController: self)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) -> Void {
         super.viewWillAppear(animated)
         
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.barTintColor = Palette.almostWhite
     }
     
+    @objc
+    func onEnterBtn() -> Void {
+        presenter?.onEnterBtn(with: _view.getVerificationCode())
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension VerificationViewController: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let maxLength = 6
         let currentString: NSString = textField.text! as NSString
@@ -64,23 +80,5 @@ class VerificationViewController: UIViewController, UITextFieldDelegate {
         }
         
         return shouldAcceptInput
-    }
-    
-    //to prohobit letters
-   /* func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        return string.rangeOfCharacter(from: CharacterSet.letters) == nil
-    } */
-    
-    @objc
-    func onEnterBtn() {
-        presenter?.onEnterBtn(with: _view.getVerificationCode())
-    }
-    
-    var presenter: VerificationPresenter?
-    
-    private var _view: VerificationView {
-        get {
-            return view as! VerificationView
-        }
     }
 }

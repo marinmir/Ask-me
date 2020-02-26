@@ -9,6 +9,7 @@
 import Foundation
 
 class AddPollPresenter {
+    // MARK: - Properties
     var interactor: AddPollInteractor?
     var router: AddPollRouter?
     var viewController: AddPollViewController?

@@ -11,8 +11,17 @@ import Firebase
 import PhoneNumberKit
 
 class ProfileInteractor {
+    // MARK: - Properties
+    var presenter: ProfilePresenter?
     
-    func getFormatterUserPhoneNumber()-> String {
+    private var userService: UserService?
+    
+    // MARK: - Public methods
+    init(_ service: UserService) {
+        userService = service
+    }
+    
+    func getFormatterUserPhoneNumber() -> String {
         let phoneNumberKit = PhoneNumberKit()
         let firebaseStringNumber = Auth.auth().currentUser?.phoneNumber ?? ""
         var formattedPhoneNumber = ""
@@ -23,10 +32,24 @@ class ProfileInteractor {
  
         return formattedPhoneNumber
     }
-  
-    func signOut() {
-        try? Auth.auth().signOut()
+    
+    func getUser() -> User {
+        return userService?.user ?? User()
     }
     
-    var presenter: ProfilePresenter?
+    func updateNickname(with text: String) -> Void {
+        userService?.updateNickname(text)
+    }
+    
+    func updateBirthday(with date: Date) -> Void {
+        userService?.updateBirthday(date)
+    }
+    
+    func updateGender(with gender: Gender) -> Void {
+        userService?.updateGender(gender)
+    }
+  
+    func signOut() -> Void {
+        try? Auth.auth().signOut()
+    }
 }

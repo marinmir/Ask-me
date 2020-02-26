@@ -6,10 +6,10 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class Palette {
+    // MARK: - Properties
     static let coffeeColor = UIColor(red: 145/256, green: 129/256, blue: 115/256, alpha: 1)
     static let darkCoffeeColor = UIColor(red: 100/256, green: 87/256, blue: 79/256, alpha: 1)
     static let turquoiseColor = UIColor(red: 145/256, green: 189/256, blue: 179/256, alpha: 1)

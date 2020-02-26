@@ -6,40 +6,46 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ProfileView: UIView {
+    // MARK: - Properties
+    let tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
     
-    public let tableView = UITableView.init(frame: CGRect.zero, style: .grouped)
+    private weak var vc: ProfileViewController?
     
+    // MARK: - Public methods
     init(viewController vc: ProfileViewController) {
-        _vc = vc
+        self.vc = vc
         
         super.init(frame: CGRect.zero)
         
-        _setAppearance()
+        setAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func _setAppearance() {
+    // MARK: - Private methods
+    private func setAppearance() -> Void {
         self.backgroundColor = Palette.coffeeColor
+        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onBackgroundTap)))
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.dataSource = _vc
-        tableView.delegate = _vc
+        tableView.dataSource = vc
         addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: self.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -(_vc.tabBarController?.tabBar.frame.height ?? 0))
+            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -(vc!.tabBarController?.tabBar.frame.height ?? 0))
         ])
     }
     
-    private let _vc: ProfileViewController
+    @objc
+    private func onBackgroundTap() -> Void {
+        endEditing(true)
+    }
 }

@@ -6,33 +6,31 @@
 //  Copyright © 2020 Мирошниченко Марина. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class HomeView: UIView {
+    // MARK: - Properties
+    private weak var vc: HomeViewController?
     
+    // MARK: - Public methods
     init(_ vc: HomeViewController?) {
-        super.init(frame: CGRect.zero)
-        self._vc = vc
+        self.vc = vc
         
-        _setAppearance()
+        super.init(frame: CGRect.zero)
+        
+        setAppearance()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func _setAppearance() {
-        
+    // MARK: - Private methods
+    private func setAppearance() -> Void {
         self.backgroundColor = UIColor.white
-        
         
         NSLayoutConstraint.activate(
             [
         ])
     }
-    
-    
-    private weak var _vc: HomeViewController?
-    
 }
