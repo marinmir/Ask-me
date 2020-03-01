@@ -32,7 +32,7 @@ class User: Codable {
     var interests: [String]?
     
     enum CodingKeys: String, CodingKey {
-      case nickname
+        case nickname
         case birthday
         case gender
         case interests

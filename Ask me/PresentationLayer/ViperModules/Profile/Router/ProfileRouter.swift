@@ -12,7 +12,8 @@ class ProfileRouter {
     // MARK: - Public methods
     static func createModule() -> UIViewController {
         let viewController = ProfileViewController()
-        let interactor = ProfileInteractor(Assembly.userService)
+        let interactor = ProfileInteractor(userService: Assembly.userService,
+                                           interestService: Assembly.interestService)
         let presenter = ProfilePresenter()
         let router = ProfileRouter()
         
@@ -24,7 +25,7 @@ class ProfileRouter {
         
         interactor.presenter = presenter
         
-        return viewController
+        return UINavigationController(rootViewController: viewController)
     }
     
     func openAuthorizationModule(with viewController: UIViewController) -> Void {

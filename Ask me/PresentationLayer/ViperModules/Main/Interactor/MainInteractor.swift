@@ -12,18 +12,33 @@ class MainInteractor {
     // MARK: - Properties
     var presenter: MainPresenter?
     
-    private var service: UserService
+    private var userService: UserService
+    private var interestService: InterestService
     
     // MARK: - Public methods
-    init(_ service: UserService) {
-        self.service = service
+    init(withUserService us: UserService, withInterestService ins: InterestService) {
+        userService = us
+        interestService = ins
     }
     
     func getProfile(completion: @escaping (User) -> Void) -> Void {
-        if let user = service.user {
+        if let user = userService.user {
             completion(user)
         } else {
-            service.loadUser(completion: completion)
+            userService.loadUser(completion: completion)
+            
+        }
+    }
+    
+    func getBaseInterests(completion: @escaping ([String]) -> Void) -> Void {
+        interestService.loadBaseInterests { (baseInterests: [String]) in
+            completion(baseInterests)
+        }
+    }
+    
+    func getUserInterests(completion: @escaping ([String]) -> Void) -> Void {
+        interestService.loadUserInterests { (userInterests: [String]) in
+            completion(userInterests)
         }
     }
 }

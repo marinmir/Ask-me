@@ -38,4 +38,14 @@ class FirebaseReader {
             callback(json)
         })
     }
+    
+    func subscribeOnStringArray(forPath path: String, onChange callback: @escaping ([String]) -> Void) {
+        ref.child(path).observe(.value, with: { snapshot in
+            guard let json = snapshot.value as? [String] else {
+                return
+            }
+            
+            callback(json)
+        })
+    }
 }

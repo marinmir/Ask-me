@@ -29,4 +29,8 @@ class FirebaseWriter {
     func addNumber(for path: String, with number: Int) -> Void {
         self.ref.child(path).setValue(number)
     }
+    
+    func addArray(for path: String, with array: [String]) -> Void {
+        self.ref.child(path).setValue(array)
+    }
 }

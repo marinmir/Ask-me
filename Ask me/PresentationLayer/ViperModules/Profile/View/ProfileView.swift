@@ -29,8 +29,8 @@ class ProfileView: UIView {
     
     // MARK: - Private methods
     private func setAppearance() -> Void {
-        self.backgroundColor = Palette.coffeeColor
-        self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onBackgroundTap)))
+        backgroundColor = Palette.almostWhite
+        addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onBackgroundTap)))
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = vc

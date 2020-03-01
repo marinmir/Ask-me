@@ -10,4 +10,6 @@ import Foundation
 
 class Assembly {
     static let userService = UserService()
+    
+    static let interestService = InterestService()
 }

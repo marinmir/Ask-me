@@ -34,6 +34,10 @@
 		0E78BD4A23D0F622009CCDC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E78BD4923D0F622009CCDC7 /* Assets.xcassets */; };
 		0E78BD4D23D0F622009CCDC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E78BD4B23D0F622009CCDC7 /* LaunchScreen.storyboard */; };
 		0E78BD5523D0F85A009CCDC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E78BD5423D0F85A009CCDC7 /* GoogleService-Info.plist */; };
+		0E7E20A6240BF27600380E79 /* PollCelll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E20A5240BF27600380E79 /* PollCelll.swift */; };
+		0E7E20A8240BF2F600380E79 /* PossibleAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E20A7240BF2F600380E79 /* PossibleAnswerCell.swift */; };
+		0E7E20AA240BF34500380E79 /* AddAnswerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E20A9240BF34500380E79 /* AddAnswerCell.swift */; };
+		0E7E20AD240BF99900380E79 /* UIViewController+Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E20AC240BF99900380E79 /* UIViewController+Alerts.swift */; };
 		0E9BA2F123E342EC00A5AA61 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BA2F023E342EC00A5AA61 /* AuthorizationView.swift */; };
 		0E9BA2F323E3433100A5AA61 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BA2F223E3433100A5AA61 /* AuthorizationViewController.swift */; };
 		0E9BA2F623E34B4400A5AA61 /* PhoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BA2F523E34B4400A5AA61 /* PhoneTextField.swift */; };
@@ -55,7 +59,12 @@
 		0ECC8B0323FC840F00CA21EE /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC8B0223FC840F00CA21EE /* MainInteractor.swift */; };
 		0ECC8B0623FC843000CA21EE /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC8B0523FC843000CA21EE /* MainPresenter.swift */; };
 		0ECC8B0823FC94D800CA21EE /* FirebaseWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECC8B0723FC94D800CA21EE /* FirebaseWriter.swift */; };
+		0EE4813524089AF300D41AA8 /* InterestCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE4813424089AF300D41AA8 /* InterestCells.swift */; };
 		0EE6A3C023F32B0F0016EB2C /* StaticPersonalInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */; };
+		0EF371A324084BC600671910 /* InterestsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF371A224084BC600671910 /* InterestsCell.swift */; };
+		0EF371A72408502900671910 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF371A62408502900671910 /* InterestsViewController.swift */; };
+		0EF371AA240854E200671910 /* InterestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF371A9240854E200671910 /* InterestsView.swift */; };
+		0EF371AC2408591B00671910 /* InterestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF371AB2408591B00671910 /* InterestService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -102,6 +111,10 @@
 		0E78BD4C23D0F622009CCDC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E78BD4E23D0F622009CCDC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E78BD5423D0F85A009CCDC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E7E20A5240BF27600380E79 /* PollCelll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollCelll.swift; sourceTree = "<group>"; };
+		0E7E20A7240BF2F600380E79 /* PossibleAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossibleAnswerCell.swift; sourceTree = "<group>"; };
+		0E7E20A9240BF34500380E79 /* AddAnswerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnswerCell.swift; sourceTree = "<group>"; };
+		0E7E20AC240BF99900380E79 /* UIViewController+Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alerts.swift"; sourceTree = "<group>"; };
 		0E9BA2F023E342EC00A5AA61 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
 		0E9BA2F223E3433100A5AA61 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		0E9BA2F523E34B4400A5AA61 /* PhoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneTextField.swift; sourceTree = "<group>"; };
@@ -121,7 +134,12 @@
 		0ECC8B0223FC840F00CA21EE /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		0ECC8B0523FC843000CA21EE /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		0ECC8B0723FC94D800CA21EE /* FirebaseWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseWriter.swift; sourceTree = "<group>"; };
+		0EE4813424089AF300D41AA8 /* InterestCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestCells.swift; sourceTree = "<group>"; };
 		0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticPersonalInfoCell.swift; sourceTree = "<group>"; };
+		0EF371A224084BC600671910 /* InterestsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCell.swift; sourceTree = "<group>"; };
+		0EF371A62408502900671910 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		0EF371A9240854E200671910 /* InterestsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterestsView.swift; sourceTree = "<group>"; };
+		0EF371AB2408591B00671910 /* InterestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestService.swift; sourceTree = "<group>"; };
 		6A19736048ED126DF5AE899D /* Pods-Ask me.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ask me.debug.xcconfig"; path = "Target Support Files/Pods-Ask me/Pods-Ask me.debug.xcconfig"; sourceTree = "<group>"; };
 		9E32B16627FBFA46C180221B /* Pods_Ask_me.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ask_me.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2AAE37CFECF8038AC63F1F6 /* Pods-Ask me.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ask me.release.xcconfig"; path = "Target Support Files/Pods-Ask me/Pods-Ask me.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +237,7 @@
 		0E1C9BC923DA45D700F47845 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E7E20A4240BF11300380E79 /* Subviews */,
 				0E1C9BCA23DA45F600F47845 /* AddPollView.swift */,
 				0E1C9BCC23DA464100F47845 /* AddPollViewController.swift */,
 			);
@@ -344,11 +363,13 @@
 		0E4EDF7323EE02B0007E3481 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
+				0EF371A82408540D00671910 /* Interests */,
 				0E4EDF7423EE02C8007E3481 /* AvatarCell.swift */,
 				0EE6A3BF23F32B0F0016EB2C /* StaticPersonalInfoCell.swift */,
 				0E2C319323F4463B001A1676 /* SignOutCell.swift */,
 				0E0F777623FAA441003DAAE9 /* BirthdayCell.swift */,
 				0E0324D824056EF9001EEA06 /* GenderCell.swift */,
+				0EF371A224084BC600671910 /* InterestsCell.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -387,6 +408,24 @@
 				0EC0AFF323FF1DB6001B28BA /* Assembly.swift */,
 			);
 			path = "Ask me";
+			sourceTree = "<group>";
+		};
+		0E7E20A4240BF11300380E79 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				0E7E20A5240BF27600380E79 /* PollCelll.swift */,
+				0E7E20A7240BF2F600380E79 /* PossibleAnswerCell.swift */,
+				0E7E20A9240BF34500380E79 /* AddAnswerCell.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		0E7E20AB240BF97A00380E79 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E7E20AC240BF99900380E79 /* UIViewController+Alerts.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		0E9BA2EE23E3429F00A5AA61 /* Authorization */ = {
@@ -465,6 +504,7 @@
 		0EA1A47423E9D76A0066DE82 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0E7E20AB240BF97A00380E79 /* Extensions */,
 				0EA1A47523E9D7750066DE82 /* Constants  */,
 			);
 			path = Common;
@@ -490,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				0EC0AFF123FF15CD001B28BA /* UserService.swift */,
+				0EF371AB2408591B00671910 /* InterestService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -528,6 +569,7 @@
 				0E4EDF7323EE02B0007E3481 /* Subviews */,
 				0EC13D9823DCCC1C00685318 /* ProfileView.swift */,
 				0EC13D9A23DCCC4600685318 /* ProfileViewController.swift */,
+				0EF371A62408502900671910 /* InterestsViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -546,6 +588,15 @@
 				0ECC8B0523FC843000CA21EE /* MainPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0EF371A82408540D00671910 /* Interests */ = {
+			isa = PBXGroup;
+			children = (
+				0EF371A9240854E200671910 /* InterestsView.swift */,
+				0EE4813424089AF300D41AA8 /* InterestCells.swift */,
+			);
+			path = Interests;
 			sourceTree = "<group>";
 		};
 		102EB5831A66340EBA2BA5D3 /* Pods */ = {
@@ -684,6 +735,7 @@
 				0E9BA30223E36A4800A5AA61 /* AuthorizationRouter.swift in Sources */,
 				0E1C9BCD23DA464100F47845 /* AddPollViewController.swift in Sources */,
 				0E0CDC9323DE416F002C3E8D /* FirebaseReader.swift in Sources */,
+				0E7E20AA240BF34500380E79 /* AddAnswerCell.swift in Sources */,
 				0E0163E123EB540600D4B9D9 /* VerificationPresenter.swift in Sources */,
 				0E9BA2FC23E3679800A5AA61 /* VerificationViewController.swift in Sources */,
 				0E9BA30523E36ACB00A5AA61 /* VerificationRouter.swift in Sources */,
@@ -692,8 +744,10 @@
 				0E78BD4523D0F621009CCDC7 /* HomeViewController.swift in Sources */,
 				0E4EDF6F23EDEC70007E3481 /* ProfilePresenter.swift in Sources */,
 				0E9BA2FA23E3676700A5AA61 /* VerificationView.swift in Sources */,
+				0E7E20AD240BF99900380E79 /* UIViewController+Alerts.swift in Sources */,
 				0ECC8B0823FC94D800CA21EE /* FirebaseWriter.swift in Sources */,
 				0E4EDF7523EE02C8007E3481 /* AvatarCell.swift in Sources */,
+				0EF371A72408502900671910 /* InterestsViewController.swift in Sources */,
 				0E0163E423EB653300D4B9D9 /* MainRouter.swift in Sources */,
 				0EC0AFF223FF15CD001B28BA /* UserService.swift in Sources */,
 				0E1C9BC723DA3FB100F47845 /* SearchViewController.swift in Sources */,
@@ -703,17 +757,22 @@
 				0EC0AFF423FF1DB6001B28BA /* Assembly.swift in Sources */,
 				0E78BD4123D0F621009CCDC7 /* AppDelegate.swift in Sources */,
 				0EA1A47A23E9F0D80066DE82 /* AuthorizationInteractor.swift in Sources */,
+				0EF371A324084BC600671910 /* InterestsCell.swift in Sources */,
 				0E9BA2F323E3433100A5AA61 /* AuthorizationViewController.swift in Sources */,
 				0E0F776F23FA94C5003DAAE9 /* AddPollRouter.swift in Sources */,
+				0EF371AA240854E200671910 /* InterestsView.swift in Sources */,
 				0E48A4AE23E223E6007A75B9 /* User.swift in Sources */,
 				0E9BA2F623E34B4400A5AA61 /* PhoneTextField.swift in Sources */,
 				0EA1A47723E9D7A00066DE82 /* Palette.swift in Sources */,
 				0E78BD4323D0F621009CCDC7 /* SceneDelegate.swift in Sources */,
+				0EF371AC2408591B00671910 /* InterestService.swift in Sources */,
 				0E0F777223FA94FA003DAAE9 /* AddPollPresenter.swift in Sources */,
 				0E1C9BC523DA3FA000F47845 /* SearchView.swift in Sources */,
 				0E0F777723FAA441003DAAE9 /* BirthdayCell.swift in Sources */,
 				0E9BA2FF23E3690C00A5AA61 /* AuthorizationPresenter.swift in Sources */,
+				0EE4813524089AF300D41AA8 /* InterestCells.swift in Sources */,
 				0E4EDF6C23EDEC3A007E3481 /* ProfileRouter.swift in Sources */,
+				0E7E20A8240BF2F600380E79 /* PossibleAnswerCell.swift in Sources */,
 				0EC13D9523DCC98300685318 /* NotificationsViewController.swift in Sources */,
 				0EC13D9B23DCCC4600685318 /* ProfileViewController.swift in Sources */,
 				0E438EF523D2442400D7E32A /* MainViewController.swift in Sources */,
@@ -723,6 +782,7 @@
 				0E0F777523FA9527003DAAE9 /* AddPollInteractor.swift in Sources */,
 				0E0324D924056EF9001EEA06 /* GenderCell.swift in Sources */,
 				0E1C9BCB23DA45F600F47845 /* AddPollView.swift in Sources */,
+				0E7E20A6240BF27600380E79 /* PollCelll.swift in Sources */,
 				0E0163DF23EB53D500D4B9D9 /* VerificationInteractor.swift in Sources */,
 				0ECC8B0323FC840F00CA21EE /* MainInteractor.swift in Sources */,
 			);
@@ -864,7 +924,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZK4JGKBN2J;
 				INFOPLIST_FILE = "Ask me/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -884,7 +944,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZK4JGKBN2J;
 				INFOPLIST_FILE = "Ask me/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

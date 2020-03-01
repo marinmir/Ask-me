@@ -24,6 +24,6 @@ class AddPollRouter {
                
                interactor.presenter = presenter
                
-               return viewController
+               return UINavigationController(rootViewController: viewController)
     }
 }

@@ -24,12 +24,26 @@ class ProfileViewController: UIViewController {
         super.loadView()
         
         view = ProfileView(viewController: self)
+        navigationItem.title = "Profile"
     }
     
     override func viewWillAppear(_ animated: Bool) -> Void {
-        super.viewWillAppear(true)
-        
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
         user = presenter?.getUser()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    func getBaseInterests() -> [String] {
+        return presenter?.getBaseInterests() ?? []
+    }
+    
+    func getUserInterests() -> [String] {
+        return presenter?.getUserInterests() ?? []
     }
     
     func onBirthdayEditingFinished(with birthday: Date) -> Void {
@@ -44,6 +58,16 @@ class ProfileViewController: UIViewController {
         presenter?.onNewGender(with: gender)
     }
     
+    func onInterestsCell() -> Void {
+        let interestsVC = InterestsViewController(profileVC: self)
+        
+        navigationController?.pushViewController(interestsVC, animated: true)
+    }
+    
+    func updateUserInterests(userInterests interests: [String]) {
+        presenter?.updateUserInterests(userInterests: interests)
+    }
+    
     @objc
     func onSignOutCellTap() -> Void {
         presenter?.onSignOutCell()
@@ -56,6 +80,7 @@ class ProfileViewController: UIViewController {
         _view.tableView.register(SignOutCell.self, forCellReuseIdentifier: SignOutCell.identifier)
         _view.tableView.register(BirthdayCell.self, forCellReuseIdentifier: BirthdayCell.identifier)
         _view.tableView.register(GenderCell.self, forCellReuseIdentifier: GenderCell.identifier)
+        _view.tableView.register(InterestsCell.self, forCellReuseIdentifier: InterestsCell.identifier)
     }
 }
 
@@ -108,7 +133,9 @@ extension ProfileViewController: UITableViewDataSource {
                     return UITableViewCell()
             }
         case 2:
-            return UITableViewCell()
+            let cell = InterestsCell(viewController: self)
+            cell.accessoryType = .disclosureIndicator
+            return cell
         case 3:
             let cell = SignOutCell()
             cell.setOnTapCallback(with: self)

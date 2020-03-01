@@ -19,5 +19,13 @@ class MainPresenter {
         interactor?.getProfile(completion: { user in
             // TODO: implement loading indicator open/close
         })
+        
+        interactor?.getBaseInterests(completion: { baseInterests in
+            // TODO: implement loading indicator open/close
+        })
+        
+        interactor?.getUserInterests(completion: { userInterests in
+            // TODO: implement loading indicator open/close
+        })
     }
 }

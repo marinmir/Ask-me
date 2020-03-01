@@ -15,10 +15,12 @@ class ProfileInteractor {
     var presenter: ProfilePresenter?
     
     private var userService: UserService?
+    private var interestService: InterestService?
     
     // MARK: - Public methods
-    init(_ service: UserService) {
-        userService = service
+    init(userService us: UserService, interestService ins: InterestService) {
+        userService = us
+        interestService = ins
     }
     
     func getFormatterUserPhoneNumber() -> String {
@@ -35,6 +37,22 @@ class ProfileInteractor {
     
     func getUser() -> User {
         return userService?.user ?? User()
+    }
+    
+    func getBaseInterests() -> [String] {
+        return interestService?.baseInterests ?? []
+    }
+    
+    func getUserInterests() -> [String] {
+        return interestService?.userInterests ?? []
+    }
+    
+    func updateInterests(_ interests: [String]) {
+        guard let user = userService?.user else {
+            return
+        }
+        user.interests? = interests
+        interestService?.updateUserInterests(interests)
     }
     
     func updateNickname(with text: String) -> Void {

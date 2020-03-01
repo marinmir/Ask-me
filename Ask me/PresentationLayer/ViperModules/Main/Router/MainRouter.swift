@@ -12,7 +12,7 @@ class MainRouter {
     // MARK: - Public methods
     static func createModule() -> UIViewController {
         let vc = MainViewController()
-        let interactor = MainInteractor(Assembly.userService)
+        let interactor = MainInteractor(withUserService: Assembly.userService, withInterestService: Assembly.interestService)
         let presenter = MainPresenter()
         let router = MainRouter()
         

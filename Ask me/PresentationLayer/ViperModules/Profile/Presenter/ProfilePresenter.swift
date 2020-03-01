@@ -23,6 +23,18 @@ class ProfilePresenter {
         return interactor?.getUser() ?? User()
     }
     
+    func getBaseInterests() -> [String] {
+        interactor?.getBaseInterests() ?? []
+    }
+    
+    func getUserInterests() -> [String] {
+        interactor?.getUserInterests() ?? []
+    }
+    
+    func updateUserInterests(userInterests interests: [String]) {
+        interactor?.updateInterests(interests)
+    }
+    
     func onSignOutCell() -> Void {
         interactor?.signOut()
         router?.openAuthorizationModule(with: viewController!)
