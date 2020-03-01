@@ -60,10 +60,14 @@ class AddPollViewController: UIViewController {
     @objc
     func onAddAnswerCell() {
         if presenter!.canAddAnswer(currentCount: pollCases.count) {
-            pollCases.append(" ")
+            pollCases.append("")
             _view.tableView.reloadSections([1], with: .automatic)
             _view.tableView.scrollToRow(at: IndexPath(row: pollCases.count, section: 1), at: .bottom, animated: true)
         }
+    }
+    
+    func onPollCaseChanged(newText text: String, atIndex index: Int) {
+        pollCases[index] = text
     }
     
     // MARK: - Private methods
@@ -104,7 +108,7 @@ extension AddPollViewController: UITableViewDataSource {
                 return addAnswerCell
             } else {
                 let possibleAnswerCell = PossibleAnswerCell(viewController: self)
-                possibleAnswerCell.setContetnt(orderNumber: String(indexPath.row + 1))
+                possibleAnswerCell.setContent(orderNumber: String(indexPath.row + 1), withText: pollCases[indexPath.row])
                 return possibleAnswerCell
             }
         default:
@@ -120,6 +124,31 @@ extension AddPollViewController: UITableViewDataSource {
             return "Possible answers"
         default:
             return nil
+        }
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension AddPollViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        switch indexPath.section {
+        case 1:
+            if indexPath.row == pollCases.count {
+                return .none
+            } else {
+                return .delete
+            }
+        default:
+            return .none
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            pollCases.remove(at: indexPath.row)
+            tableView.reloadSections([1], with: .automatic)
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
 }

@@ -29,8 +29,9 @@ class PossibleAnswerCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setContetnt(orderNumber number: String) {
+    func setContent(orderNumber number: String, withText text: String) {
         countLabel.text = number
+        possibleAnswerTextField.text = text
     }
 
     // MARK: - Private methods
@@ -40,6 +41,7 @@ class PossibleAnswerCell: UITableViewCell {
         
          possibleAnswerTextField.translatesAutoresizingMaskIntoConstraints = false
          possibleAnswerTextField.placeholder = "Enter your variant of answer"
+        possibleAnswerTextField.delegate = self
          contentView.addSubview(possibleAnswerTextField)
          
          NSLayoutConstraint.activate([
@@ -55,5 +57,12 @@ class PossibleAnswerCell: UITableViewCell {
             possibleAnswerTextField.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -4),
             possibleAnswerTextField.heightAnchor.constraint(equalToConstant: 44),
          ])
+    }
+}
+
+// MARK: UITextFieldDelegate
+extension PossibleAnswerCell: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        vc.onPollCaseChanged(newText: possibleAnswerTextField.text ?? "", atIndex: Int(countLabel.text!)! - 1)
     }
 }

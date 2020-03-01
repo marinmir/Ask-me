@@ -33,6 +33,7 @@ class AddPollView: UIView {
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = vc
+        tableView.delegate = vc
         addSubview(tableView)
         
         NSLayoutConstraint.activate([
